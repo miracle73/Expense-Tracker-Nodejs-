@@ -15,7 +15,7 @@ const usersSchema = new mongoose.Schema({
     required: [true, "Password is required"],
   },
   balance: {
-    type: String,
+    type: Number,
     required: [true, "Balance is required"],
     default: 0,
   },
