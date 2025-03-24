@@ -17,7 +17,7 @@ const Login = async (req, res) => {
   if (!comparePassword) throw "User details is incorrect";
   const accessToken = await jsonwebtoken.sign(
     {
-      name: getUser.name,
+      name: getUser.full_name,
       id: getUser._id,
     },
     process.env.jwt_secret
